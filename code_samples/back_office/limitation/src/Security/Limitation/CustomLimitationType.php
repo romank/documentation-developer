@@ -56,7 +56,7 @@ class CustomLimitationType implements Type
      *
      * @return bool|null
      */
-    public function evaluate(Limitation $value, UserReference $currentUser, object $object, array $targets = null): ?bool
+    public function evaluate(Limitation $value, UserReference $currentUser, object $object, ?array $targets = null): ?bool
     {
         if (!$value instanceof CustomLimitationValue) {
             throw new InvalidArgumentException('$value', 'Must be of type: CustomLimitationValue');
