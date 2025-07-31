@@ -1,5 +1,17 @@
 deptrac:
   skip_violations:
+    Acme\ExampleBundle\DependencyInjection\AcmeExampleExtension:
+      - Ibexa\Bundle\Core\DependencyInjection\Configuration\SiteAccessAware\ConfigurationProcessor
+      - Ibexa\Bundle\Core\DependencyInjection\Configuration\SiteAccessAware\ContextualizerInterface
+    Acme\ExampleBundle\DependencyInjection\Configuration:
+      - Ibexa\Bundle\Core\DependencyInjection\Configuration\SiteAccessAware\Configuration
+    App\AI\REST\Input\Parser\TranscribeAudio:
+      - Ibexa\ConnectorAi\REST\Input\Parser\Action
+      - Ibexa\Rest\Input\BaseParser
+    App\AI\REST\Output\Resolver\AudioTextResolver:
+      - Ibexa\ConnectorAi\REST\Output\ResolverInterface
+    App\AI\REST\Value\AudioText:
+      - Ibexa\ConnectorAi\REST\Value\RestActionResponse
     App\Attribute\Percent\Form\PercentValueFormMapper:
       - Ibexa\Bundle\ProductCatalog\Validator\Constraints\AttributeValue
     App\Attribute\Percent\PercentOptionsFormMapper:
@@ -8,6 +20,10 @@ deptrac:
       - Ibexa\ProductCatalog\Local\Persistence\Legacy\Attribute\Float\StorageSchema
     App\Attribute\Percent\Storage\PercentStorageDefinition:
       - Ibexa\ProductCatalog\Local\Persistence\Legacy\Attribute\Float\StorageSchema
+    App\AutomatedTranslation\AiClient:
+      - Ibexa\AutomatedTranslation\Exception\ClientNotConfiguredException
+    App\AutomatedTranslation\ImageFieldEncoder:
+      - Ibexa\Core\FieldType\Image\Value
     App\Block\Listener\MyBlockListener:
       - Ibexa\FieldTypePage\FieldType\Page\Block\Renderer\BlockRenderEvents
       - Ibexa\FieldTypePage\FieldType\Page\Block\Renderer\Event\PreRenderEvent
@@ -17,12 +33,21 @@ deptrac:
       - Ibexa\Checkout\Value\Workflow\Workflow
     App\Checkout\Workflow\Strategy\NewWorkflowConditionalStep:
       - Ibexa\Checkout\Value\Workflow\Workflow
+    App\Command\AddMissingAltTextCommand:
+      - Ibexa\Core\FieldType\Image\Value
+      - Ibexa\Core\IO\IOBinarydataHandler
     App\Command\CalendarCommand:
       - Ibexa\Scheduler\Calendar\EventAction\RescheduleEventActionContext
     App\Command\CatalogCommand:
       - Ibexa\ProductCatalog\Local\Repository\Values\Catalog\Status
     App\Command\CreateImageCommand:
       - Ibexa\Core\FieldType\Image\Value
+    App\Command\ManageDiscountsCommand:
+      - Ibexa\DiscountsCodes\Value\DiscountCondition\IsValidDiscountCode
+      - Ibexa\Discounts\Value\DiscountCondition\IsInCurrency
+      - Ibexa\Discounts\Value\DiscountCondition\IsInRegions
+      - Ibexa\Discounts\Value\DiscountCondition\IsProductInArray
+      - Ibexa\Discounts\Value\DiscountRule\FixedAmount
     App\Command\MigrationCommand:
       - Ibexa\Migration\Repository\Migration
     App\Command\PaymentMethodCommand:
