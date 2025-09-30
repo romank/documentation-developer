@@ -69,6 +69,7 @@ composer phpstan -- --generate-baseline
 ### Deptrac
 
 This repository uses Deptrac to test the code samples. To run the tests locally execute the commands below:
+
 ```bash
 composer update
 composer deptrac

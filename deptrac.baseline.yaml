@@ -1,27 +1,7 @@
 deptrac:
   skip_violations:
-    Acme\ExampleBundle\DependencyInjection\AcmeExampleExtension:
-      - Ibexa\Bundle\Core\DependencyInjection\Configuration\SiteAccessAware\ConfigurationProcessor
-      - Ibexa\Bundle\Core\DependencyInjection\Configuration\SiteAccessAware\ContextualizerInterface
-    Acme\ExampleBundle\DependencyInjection\Configuration:
-      - Ibexa\Bundle\Core\DependencyInjection\Configuration\SiteAccessAware\Configuration
     App\AI\REST\Input\Parser\TranscribeAudio:
-      - Ibexa\ConnectorAi\REST\Input\Parser\Action
       - Ibexa\Rest\Input\BaseParser
-    App\AI\REST\Output\Resolver\AudioTextResolver:
-      - Ibexa\ConnectorAi\REST\Output\ResolverInterface
-    App\AI\REST\Value\AudioText:
-      - Ibexa\ConnectorAi\REST\Value\RestActionResponse
-    App\Attribute\Percent\Form\PercentValueFormMapper:
-      - Ibexa\Bundle\ProductCatalog\Validator\Constraints\AttributeValue
-    App\Attribute\Percent\PercentOptionsFormMapper:
-      - Ibexa\Bundle\ProductCatalog\Validator\Constraints\AttributeDefinitionOptions
-    App\Attribute\Percent\Storage\PercentStorageConverter:
-      - Ibexa\ProductCatalog\Local\Persistence\Legacy\Attribute\Float\StorageSchema
-    App\Attribute\Percent\Storage\PercentStorageDefinition:
-      - Ibexa\ProductCatalog\Local\Persistence\Legacy\Attribute\Float\StorageSchema
-    App\AutomatedTranslation\AiClient:
-      - Ibexa\AutomatedTranslation\Exception\ClientNotConfiguredException
     App\AutomatedTranslation\ImageFieldEncoder:
       - Ibexa\Core\FieldType\Image\Value
     App\Block\Listener\MyBlockListener:
@@ -73,7 +53,7 @@ deptrac:
     App\Controller\CustomCheckoutController:
       - Ibexa\Bundle\Core\Controller
     App\Controller\CustomController:
-      - Ibexa\Bundle\Core\Controller
+      - Ibexa\Core\MVC\Symfony\Security\Authorization\Attribute
     App\Controller\CustomFilterController:
       - Ibexa\Bundle\Core\Controller
       - Ibexa\Core\MVC\Symfony\View\ContentView
@@ -158,8 +138,12 @@ deptrac:
       - Ibexa\Migration\ValueObject\Step\StepInterface
     App\Migrations\Step\ReplaceNameStepNormalizer:
       - Ibexa\Migration\ValueObject\Step\StepInterface
+    App\Notification\ListRenderer:
+      - Ibexa\Core\Notification\Renderer\NotificationRenderer
+      - Ibexa\Core\Notification\Renderer\TypedNotificationRendererInterface
     App\Notification\MyRenderer:
       - Ibexa\Core\Notification\Renderer\NotificationRenderer
+      - Ibexa\Core\Notification\Renderer\TypedNotificationRendererInterface
     App\OAuth\GoogleResourceOwnerMapper:
       - Ibexa\OAuth2Client\ResourceOwner\ResourceOwnerToExistingOrNewUserMapper
     App\QueryType\LatestContentQueryType:
