@@ -127,8 +127,12 @@ The values are going to be stored within a table named `app_product_specificatio
 === "MySQL"
 
     ``` sql
-    CREATE TABLE app_product_specification_attribute_percent (id INT NOT NULL, value DOUBLE PRECISION DEFAULT NULL, INDEX app_product_specification_attribute_percent_value_idx (value), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_520_ci` ENGINE = InnoDB;
-    ALTER TABLE app_product_specification_attribute_percent ADD CONSTRAINT app_product_specification_attribute_percent_fk FOREIGN KEY (id) REFERENCES ibexa_product_specification_attribute (id) ON UPDATE CASCADE ON DELETE CASCADE;
+    CREATE TABLE app_product_specification_attribute_percent (
+        id INT NOT NULL,
+        value DOUBLE PRECISION DEFAULT NULL,
+        INDEX app_product_specification_attribute_percent_value_idx (value),
+        PRIMARY KEY (id)
+    ) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_520_ci` ENGINE = InnoDB;
     ```
 
 === "PostgreSQL"
