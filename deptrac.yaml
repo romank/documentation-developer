@@ -25,6 +25,8 @@ deptrac:
           collectors:
               - type: classLike
                 value: .*Ibexa\\.*\\Rest\\.*
+              - type: classLike
+                value: .*Ibexa\\Rest\\.*
         - name: IbexaConstraints
           collectors:
               - type: classLike

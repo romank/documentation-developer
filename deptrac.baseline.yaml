@@ -1,7 +1,5 @@
 deptrac:
   skip_violations:
-    App\AI\REST\Input\Parser\TranscribeAudio:
-      - Ibexa\Rest\Input\BaseParser
     App\AutomatedTranslation\ImageFieldEncoder:
       - Ibexa\Core\FieldType\Image\Value
     App\Block\Listener\MyBlockListener:
@@ -153,14 +151,6 @@ deptrac:
     App\QueryType\OptionsBasedLatestContentQueryType:
       - Ibexa\Core\QueryType\OptionsResolverBasedQueryType
       - Ibexa\Core\QueryType\QueryType
-    App\Rest\Controller\DefaultController:
-      - Ibexa\Rest\Message
-      - Ibexa\Rest\Server\Controller
-    App\Rest\InputParser\GreetingInput:
-      - Ibexa\Rest\Input\BaseParser
-    App\Rest\ValueObjectVisitor\RestLocation:
-      - Ibexa\Rest\Server\Output\ValueObjectVisitor\RestLocation
-      - Ibexa\Rest\Server\Values\URLAliasRefList
     App\Search\Model\Suggestion\ProductSuggestion:
       - Ibexa\ProductCatalog\Local\Repository\Values\Product
     App\Security\Limitation\CustomLimitationType:
