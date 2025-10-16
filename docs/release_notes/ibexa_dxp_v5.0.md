@@ -12,6 +12,19 @@ month_change: false
 
 [[% set version = 'v5.0.2' %]]
 
+[[= release_note_entry_begin("Integrated help", '2024-10-20', ['Headless', 'Experience', 'Commerce', 'LTS Update', 'New feature']) =]]
+
+The Integrated help [LTS update](editions.md#lts-updates) brings contextual documentation, guidance, and partner-specific resources right into the [[= product_name =]]'s user interface.
+It helps editors, store managers and developers alike quickly access relevant content, training and resources without leaving the UI, which bridges the gap between product and documentation.
+
+The default help menu can be modified th include links to internal editorial guidelines, custom tutorials, or support pages.
+
+![Integrated help menu](../administration/back_office/img/5_0_integrated_help_menu.png)
+
+For more information, see [Integrated help](integrated_help.md).
+
+[[= release_note_entry_end() =]]
+
 [[= release_note_entry_begin("Ibexa DXP " + version, '2025-09-09', ['Headless', 'Experience', 'Commerce', 'New feature']) =]]
 
 #### Collaboration
