@@ -73,6 +73,8 @@ deptrac:
       - Ibexa\CorporateAccount\Event\ApplicationWorkflowEvents
       - Ibexa\CorporateAccount\Persistence\Legacy\ApplicationState\HandlerInterface
       - Ibexa\CorporateAccount\Persistence\Values\ApplicationStateUpdateStruct
+    App\Dispatcher\SomeClassThatSchedulesExecutionInTheBackground:
+      - Ibexa\Bundle\Messenger\Stamp\DeduplicateStamp
     App\EventListener\TextAnchorMenuTabListener:
       - Ibexa\AdminUi\Menu\ContentEditAnchorMenuBuilder
       - Ibexa\AdminUi\Menu\Event\ConfigureMenuEvent
