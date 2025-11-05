@@ -1,7 +1,7 @@
 ---
 description: Ibexa DXP v4.6 brings improvements to Commerce, PIM and Personalization offerings, and a number of changes in CDP and Ibexa Connect.
 title: Ibexa DXP v4.6 LTS
-month_change: true
+month_change: false
 ---
 
 <!-- vale VariablesVersion = NO -->
@@ -9,6 +9,16 @@ month_change: true
 [[= release_notes_filters('Ibexa DXP v4.6 LTS', ['Headless', 'Experience', 'Commerce', 'LTS Update', 'New feature']) =]]
 
 <div class="release-notes" markdown="1">
+
+[[% set version = 'v4.6.25' %]]
+[[= release_note_entry_begin("Ibexa DXP " + version, '2024-10-17', ['Headless', 'Experience', 'Commerce']) =]]
+#### Security
+
+This release includes security fixes.
+To learn more, see the [corresponding security advisory](https://developers.ibexa.co/security-advisories/ibexa-sa-2025-004-xss-and-enumeration-vulnerabilities-in-back-office).
+
+[[% include 'snippets/release_46.md' %]]
+[[= release_note_entry_end() =]]
 
 [[% set version = 'v4.6.24' %]]
 
@@ -216,7 +226,7 @@ In addition, you can now use the [Taxonomy limitation](limitation_reference.md#t
 
 #### Pagination for ezobjectrelationlist in GraphQL
 
-To improve performance and gain greater control over the returned responses from the [GraphQL API](graphql.md), you can now [enable pagination](relationlistfield.md#enable-pagination-in-graphql) of relations specified using the RelationList field type.
+To improve performance and gain greater control over the returned responses from the [GraphQL API](graphql.md), you can now [enable pagination]((https://doc.ibexa.co/en/4.6/content_management/field_types/field_type_reference/relationlistfield#enable-pagination-in-graphql) of relations specified using the RelationList field type.
 
 #### Breaking changes
 

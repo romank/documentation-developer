@@ -1,7 +1,7 @@
 ---
 description: Import data into your repository from prepared YAML files.
 page_type: reference
-month_change: false
+month_change: true
 ---
 
 # Importing data
@@ -537,7 +537,7 @@ The provided conditions overwrite any already existing ones.
 
 For a list of available conditions, see [Discounts API](discounts_api.md#conditions).
 
-### Discount codes [[% include 'snippets/lts-update_badge.md' %]]
+### Discount codes
 
 You can create a discount code as in the following example:
 
